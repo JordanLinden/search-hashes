@@ -78,6 +78,7 @@ def get_bad_hashes(hash, hashes):
 def search(bad_hashes, directory):
     result_dict = {}
     no_matches = bad_hashes.copy()
+    
     for obj in directory.iterdir():
         if obj.is_file():
             with obj.open() as file:
